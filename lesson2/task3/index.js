@@ -5,16 +5,14 @@ anotherNumber = 77;
 console.log(goodNumber);
 console.log(anotherNumber);
 
-let customer = {
+const customer = {
     name: 'John',
     age: '17'
 };
 
-let anotheCustomer = customer;
+const anotheCustomer = customer;
 
-anotheCustomer = {
-    age: '20'
-};
+anotheCustomer.age = 20;
 
 console.log(customer.age);
 console.log(anotheCustomer.age);
