@@ -1,4 +1,4 @@
-let goodNumber = 17;
+const goodNumber = 17;
 let anotherNumber = goodNumber;
 anotherNumber = 77;
 
