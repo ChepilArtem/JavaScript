@@ -1,6 +1,5 @@
 let goodNumber = 17;
-let anotherNumber = goodNumber;
-anotherNumber = 77;
+let anotherNumber = 77;
 
 console.log(goodNumber);
 console.log(anotherNumber);
