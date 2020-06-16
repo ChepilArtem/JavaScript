@@ -7,10 +7,18 @@ a <= b;
 a == b;
 a != b;
 
+console.log(`'a' > 'b': `, a > b);
+console.log("'a' <= 'b': ", a <= b);
+console.log("'a' == 'b': ", a == b);
+console.log("'a' != 'b': ", a != b);
+
 /* сравнение строк */
 
 'a' < 'b';
 'ab' > 'a';
+
+console.log("'a' < 'b': ", 'a' < 'b');
+console.log("'ab' > 'a': ", 'ab' > 'a');
 
 /* строгое сравнение */
 
@@ -41,13 +49,3 @@ undefined == 0;
 null == 0;
 undefined < 0;
 undefined > 0;
-
-console.log("a: ", a);
-console.log("b: ", b);
-console.log("'a' > 'b': ", 'a' > 'b');
-console.log("'a' <= 'b': ", 'a' <= 'b');
-console.log("'a' == 'b': ", 'a' == 'b');
-console.log("'a' != 'b': ", 'a' != 'b');
-
-console.log("'a' < 'b': ", 'a' < 'b');
-console.log("'ab' > 'a': ", 'ab' > 'a');
