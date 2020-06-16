@@ -53,7 +53,7 @@ console.log("17 == '17': ", 17 == '17');
 console.log("'0' == '': ", '0' == '');
 console.log("0 == '': ", 0 == '');
 console.log("null == undefined: ", null == undefined);
-console.log("fasle == 0: ", false == 0);
+console.log("false == 0: ", false == 0);
 
 
 /* осторожно c null и undefined */
