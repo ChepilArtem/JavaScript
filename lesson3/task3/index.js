@@ -45,9 +45,9 @@ undefined > 0;
 console.log("a: ", a);
 console.log("b: ", b);
 console.log("a > b: ", a > b);
-console.log("'a' <= 'b': ", a <= b);
-console.log("'a' == 'b': ", a == b);
-console.log("'a' != 'b': ", a != b);
+console.log("a <= b: ", a <= b);
+console.log("a == b: ", a == b);
+console.log("a != b: ", a != b);
 
-console.log("'a' < 'b': ", 'a' < 'b');
-console.log("'ab' > 'a': ", 'ab' > 'a');
+console.log("a < b: ", a < b);
+console.log("ab > a: ", ab > a);
