@@ -12,9 +12,6 @@ a != b;
 'a' < 'b';
 'ab' > 'a';
 
-console.log("'a' < 'b': ", 'a' < 'b');
-console.log("'ab' > 'a':", 'ab' > 'a');
-
 /* строгое сравнение */
 
 17 === 1;
@@ -25,9 +22,7 @@ console.log("'ab' > 'a':", 'ab' > 'a');
 true === false;
 true === true;
 null === undefined;
-false === 0
-
-console.log("'17' === '1': ", '17' === '1');
+false === 0;
 
 
 /* нестрогое сравнение */
@@ -47,9 +42,12 @@ null == 0;
 undefined < 0;
 undefined > 0;
 
-// console.log("a: ", a);
-// console.log("b: ", b);
-// console.log("a > b: ", a > b);
-// console.log("'a' <= 'b':", a <= b);
-// console.log("'a' == 'b':", a == b);
-// console.log("'a' != 'b':", a != b);
+console.log("a: ", a);
+console.log("b: ", b);
+console.log("a > b: ", a > b);
+console.log("'a' <= 'b': ", a <= b);
+console.log("'a' == 'b': ", a == b);
+console.log("'a' != 'b': ", a != b);
+
+console.log("'a' < 'b': ", 'a' < 'b');
+console.log("'ab' > 'a': ", 'ab' > 'a');
