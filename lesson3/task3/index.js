@@ -6,8 +6,9 @@ a > b;
 a <= b;
 a == b;
 a != b;
-
-console.log("'a' > 'b': ", 'a' > 'b');
+console.log("a: ", a);
+console.log("b: ", b);
+console.log("a > b: ", a > b);
 console.log("'a' <= 'b':", 'a' <= 'b');
 console.log("'a' == 'b':", 'a' == 'b');
 console.log("'a' != 'b':", 'a' != 'b');
@@ -32,7 +33,7 @@ true === true;
 null === undefined;
 false === 0
 
-console.log("'17' === '1': ", 17 === 1);
+console.log("'17' === '1': ", '17' === '1');
 
 
 /* нестрогое сравнение */
