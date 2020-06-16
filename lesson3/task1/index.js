@@ -35,7 +35,7 @@ null + 8;
 undefined + '5';
 'text' + null;
 
-console.log("+17: ", +17); // пробавал по разному ('+17', +'17', с пробелами и без)
+console.log("+17: ", +17);
 console.log("+'77': ", +'77');
 
 console.log("10 + '5': ", 10 + '5');
@@ -49,8 +49,8 @@ console.log("5 - undefined: ", 5 - undefined);
 console.log("'text' + null: ", 'text' + null);
 console.log("let num = 17: ", 'let num = 17');
 
-console.log("++num: ", '++num');
-console.log("num++: ", 'num++');
+console.log("++num: ", ++num);
+console.log("num++: ", num++);
 
 console.log("const a = 17: ", 'const a = 17');
 console.log("const b = -a: ", 'const b = -a');
