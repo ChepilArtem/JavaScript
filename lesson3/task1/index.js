@@ -40,3 +40,11 @@ console.log("+'77': ", +'77');
 
 console.log("10 + '5': ", 10 + '5');
 console.log("'some' + 'text': " , 'some' + 'text');
+
+console.log("undefined + 1: ", undefined + 1);
+console.log("null + 8: ", null + 8);
+console.log("undefined + '5': ", undefined + '5');
+console.log("7 - null: ", 7 - null);
+console.log("5 - undefined: ", 5 - undefined);
+console.log("'text' + null: ", 'text' + null);
+console.log("let num = 17: ", 'let num = 17');
