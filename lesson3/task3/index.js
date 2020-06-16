@@ -6,12 +6,6 @@ a > b;
 a <= b;
 a == b;
 a != b;
-console.log("a: ", a);
-console.log("b: ", b);
-console.log("a > b: ", a > b);
-console.log("'a' <= 'b':", a <= b);
-console.log("'a' == 'b':", a == b);
-console.log("'a' != 'b':", a != b);
 
 /* сравнение строк */
 
@@ -52,3 +46,10 @@ undefined == 0;
 null == 0;
 undefined < 0;
 undefined > 0;
+
+console.log("a: ", a);
+console.log("b: ", b);
+console.log("a > b: ", a > b);
+console.log("'a' <= 'b':", a <= b);
+console.log("'a' == 'b':", a == b);
+console.log("'a' != 'b':", a != b);
