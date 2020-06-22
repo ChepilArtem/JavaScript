@@ -3,7 +3,7 @@ let n = 100;
 let sum = 0;
  
 while(a <= n) {       
-    sum+=a;  
+    sum += a;  
     a++;
 }
  
