@@ -1,9 +1,10 @@
+let a = 1;
 let n = 100;
 let sum = 0;
-
-while(n > 0) {
-    sum += n;
-    n -= 100;
+ 
+while(a <= n) {       
+    sum+=a;  
+    a++;
 }
-
-console.log("Result: ", + sum);
+ 
+console.log('Result: ' + sum);
