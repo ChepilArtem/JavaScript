@@ -1,10 +1,10 @@
-let m = 10;
-let n = 20;
+let m = 11;
+let n = 15;
 let result = 1;
 
 do {
     if(m % 2 === 1) {
-        result += m;
+        result *= m;
     }
     m++;
 } while(m <= n);
