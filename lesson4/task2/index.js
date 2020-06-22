@@ -1,5 +1,5 @@
-let m = 11;
-let n = 15;
+let m = 10;
+let n = 20;
 let result = 1;
 
 do {
@@ -9,4 +9,4 @@ do {
     m++;
 } while(m <= n);
 
-console.log('Result: ' + result);
+console.log('Result: ', + result);
