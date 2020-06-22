@@ -1,9 +1,9 @@
 let n = 100;
-let sum = 0;
+let sum = 1;
 
-while(n <= 200) {
+while(n > 1) {
     sum += n;
-    n++;
+    n -=1;
 }
 
 console.log("Result: " + sum);
