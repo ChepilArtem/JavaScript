@@ -1,12 +1,13 @@
+let a = 0;
 let m = 10;
 let n = 20;
 let result = 1;
 
 do {
-    if(m % 2 === 1) {
-        result *= m;
+    if(a % 2 === 1) {
+        result *= a;
     }
-    m++;
-} while(m <= n);
+    a++;
+} while(a <= n);
 
-console.log('Result: ', + result);
+console.log('Result: ' + result);
