@@ -15,3 +15,4 @@ for( m; m <= n; m++ ){
         result = m;
     }
 }
+console.log(result);
