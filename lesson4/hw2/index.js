@@ -1,18 +1,17 @@
-let m = 2;
-let n = 10;
+const m = 1;
+const n = 50;
 let result = 0;
 
-for( m; m <= n; m++ ){
-    if( m % 2 ){
-    result += m;
-    } else 
-        if ( m % 3 ) {
-        result -= m;
-    } else 
-        if ( m % 4 ) {
-        result * m;
-    } else if ( m % 5 ) {
-        result = m;
+for (let i = m; i <= n; i++) {
+    if ((i % 2 == 0) && (i % 4 != 0)) {
+        result += i;
+    } else if (i % 3 == 0) {
+        result -= i;
+    } else if (i % 4 == 0) {
+        result *= i;
+    }
+    if (i % 5 === 0) {
+        console.log(i);
     }
 }
 
