@@ -1,5 +1,5 @@
 let m = 2;
-let n = 11;
+let n = 10;
 let result = 0;
 
 for( m; m <= n; m++ ){
@@ -12,7 +12,7 @@ for( m; m <= n; m++ ){
         if ( m % 4 ) {
         result * m;
     } else if ( m % 5 ) {
-        result = m;
+        console.log(result);
     }
 }
 
