@@ -1,5 +1,5 @@
 let m = 2;
-let n = 10;
+let n = 11;
 let result = 0;
 
 for( m; m <= n; m++ ){
@@ -15,4 +15,4 @@ for( m; m <= n; m++ ){
         result = m;
     }
 }
-console.log(result);
+
