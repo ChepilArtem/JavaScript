@@ -11,7 +11,7 @@ for (let i = m; i <= n; i++) {
         result *= i;
     }
     if (i % 5 === 0) {
-        console.log(i);
+        console.log(result);
     }
 }
 
