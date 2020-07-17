@@ -1,4 +1,4 @@
-let m = 16;
+let m = 4;
 let n = 10;
 let result = 0;
 
