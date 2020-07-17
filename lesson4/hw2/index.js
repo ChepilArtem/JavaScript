@@ -1,5 +1,5 @@
 let m = 2;
-let n = 10;
+let n = 38;
 let result = 0;
 
 for( m; m <= n; m++ ){
