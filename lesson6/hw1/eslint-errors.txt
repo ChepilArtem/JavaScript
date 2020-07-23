@@ -1,0 +1,5 @@
+Extract to constant in enclosing scope
+Extract to constant in global scope
+Extract to inner function in function 'run'
+Extract to function in global scope
+Move to a new file
