@@ -1,5 +1,18 @@
-Extract to constant in enclosing scope
-Extract to constant in global scope
-Extract to inner function in function 'run'
-Extract to function in global scope
+Fix this no-var problem
+Disable no-var for this line
+Disable no-var for the entire
+Show documentation for no-var
+Disable eqeqeq for this line
+Disable eqeqeq for the entire file
+Show documentation for eqeqeq
+Disable no-undef for this line
+Disable no-undef for the entire file
+Show documentation for no-undef
+Disable no-plusplus for this line
+Disable no-plusplus for the entire file
+Show documentation for no-plusplus
+Disable no-return-assign for this line
+Disable no-return-assign for the entire
+Show documentation for no-return-assign
+Fix all auto-fixable problems
 Move to a new file
