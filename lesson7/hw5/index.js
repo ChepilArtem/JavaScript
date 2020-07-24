@@ -1,8 +1,10 @@
-const withdraw = (clients, balances, client, amount) => balances
-[clients.indexOf(client)] <= amount ? balances
-[clients.indexOf(client)] - amount : -1;
-
-const res = withdraw(['Artem', 'Andrey', 'Vasiliy'], [100000, 220, -300], 'John', 250);
-
-console.log(res);
-
+const withdraw = (clients, balances, client, amount) => {
+    const someIndex = clients.indexOf(client);
+    const someBalances = [...balances];
+    if ((someBalances[someIndex] = someBalances[someIndex] - amount) < 0) {
+    return -1;
+    } else {
+    const newBalance = balances[someIndex] = balances[someIndex] - amount;
+    return newBalance;
+    }
+}
