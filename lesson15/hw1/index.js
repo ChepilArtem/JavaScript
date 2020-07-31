@@ -3,27 +3,27 @@ export function createLogger() {
 
     function warn(str) {
         let warn = {
-            dateTime: new Date(),
-            massege: str,
+            message: str,
             type: 'warn',
+            dateTime: new Date(),
         }
         return memory.push(warn);
     }
 
     function error(str) {
         let error = {
-            dateTime: new Date(),
-            massege: str,
+            message: str,
             type: 'error',
+            dateTime: new Date(),
         }
         return memory.push(error);
     }
 
     function log(str) {
         let log = {
-            dateTime: new Date(),
-            massege: str,
+            message: str,
             type: 'log',
+            dateTime: new Date(),
         }
         return memory.push(log);
     }
@@ -34,8 +34,7 @@ export function createLogger() {
         }
         return memory.filter(elem => elem.type === type).sort((a, b) => b.dateTime - a.dateTime);
     }
-
     return {
         warn, error, log, getRecords,
-    };
+    }
 }
