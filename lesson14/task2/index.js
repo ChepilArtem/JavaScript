@@ -1,6 +1,6 @@
-export default function createMessenger() {
+const createMessenger = () => {
 
-    let message = 'Just learn it!';
+    let message = "Just learn it!";
     let sender = 'Gromcode';
 
     function sendMessage(name) {
@@ -13,11 +13,11 @@ export default function createMessenger() {
 
     function setSender(text) {
         sender = text;
-    };
-
+    }
     return {
         sendMessage,
         setMessage,
         setSender,
     };
-}
+};
+export default createMessenger;
