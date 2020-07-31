@@ -2,39 +2,38 @@ export function createLogger() {
     let memory = [];
 
     function warn(str) {
-        memory.push({
+        let warn = {
             dateTime: new Date(),
             massege: str,
             type: 'warn',
-        });
-    };
+        }
+        return memory.push(warn);
+    }
 
     function error(str) {
-        memory.push({
+        let error = {
             dateTime: new Date(),
             massege: str,
             type: 'error',
-        });
-    };
+        }
+        return memory.push(error);
+    }
 
     function log(str) {
-        memory.push({
+        let log = {
             dateTime: new Date(),
             massege: str,
             type: 'log',
-        });
-    };
+        }
+        return memory.push(log);
+    }
 
     function getRecords(type) {
-        if (type !== undefined) {
-            let result = memory.filter(el => el.type === type)
-            .sort((a, b) => b.dateTime - a.dateTime);
-            console.log(result)
-            return result;
-        } else {
+        if (!type) {
             return memory.sort((a, b) => b.dateTime - a.dateTime);
-        };
-    };
+        }
+        return memory.filter(elem => elem.type === type).sort((a, b) => b.dateTime - a.dateTime);
+    }
 
     return {
         warn, error, log, getRecords,
