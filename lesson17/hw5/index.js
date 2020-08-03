@@ -1,29 +1,25 @@
 export const timer = {
-    minsPassed: 0,
     secondsPassed: 0,
-    
+    minsPassed: 0,
+    id: 0,
     startTimer() {
-      this.interval = setInterval(() => {
-        this.secondsPassed += 5;
-        if (this.secondsPassed === 60) {
-          this.minsPassed += 1;
-          this.secondsPassed = 0;
-        }
-      }, 5000);
+        this.id = setInterval(() => {
+            this.secondsPassed++;
+            if (this.secondsPassed === 60) {
+                this.secondsPassed = 0;
+                this.minsPassed++;
+            }
+        }, 1000); 
     },
-  
+
     getTime() {
-      if (this.secondsPassed >= 10)
-        return `${this.minsPassed}:${this.secondsPassed}`;
-      return `${this.minsPassed}:0${this.secondsPassed}`;
+        return `${this.minsPassed}:${this.secondsPassed < 10 ? '0' + this.secondsPassed:this.secondsPassed}`;
     },
-  
     stopTimer() {
-      clearInterval(this.interval);
+        clearInterval(this.id);
     },
-  
-    resetTimer (){
-      this.secondsPassed = 0;
-      this.minsPassed = 0;
-    }
-  };
+    resetTimer() {
+        this.secondsPassed = 0;
+        this.minsPassed = 0;
+    },
+}
