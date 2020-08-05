@@ -1,45 +1,42 @@
-class Order {
+export class User {
     constructor(id, name, sessionId) {
-        this._id = string;
-        this._name = string;
-        this._sessionId = string;
+        this._id = id;
+        this._name = name;
+        this._sessionId = sessionId;
     }
+
     get id() {
         return this._id;
     }
+
     get name() {
         return this._name;
     }
+
     get sessionId() {
         return this._sessionId;
     }
-};
+}
 
-class UserRepository {
+export class UserRepository {
     constructor(users) {
         this._users = Object.freeze(users);
     }
+
     get users() {
         return this._users;
     }
+
     getUserNames() {
-        return this._users.map(i => i._name);
+        return this._users.map(item => item._name);
     }
+
     getUserIds() {
-        return this._users.map(i => i._id);
+        return this.users.map(item => item._id);
     }
-    getUserNameById(i) {
-        return this._users.find(a => a.id === i).name;
+
+    getUserNameById(id) {
+        return this.users.find(el => el._id === id)._name;
     }
 }
-
-const usersArr = new User(`${Math.random()}`, 'Art', '53459');
-
-
-const getUsersData = new UserRepository(['Lol', 'Bobby', 'Tom']);
-console.log(getUsersData);
-console.log(getUsersData.getUserNames());
-console.log(getUsersData.getUserIds());
-console.log(getUsersData.getUserNameById());
-
 
