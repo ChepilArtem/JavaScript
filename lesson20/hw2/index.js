@@ -35,6 +35,7 @@ class UserRepository {
 
 const usersArr = new User(`${Math.random()}`, 'Art', '53459');
 
+
 const getUsersData = new UserRepository(['Lol', 'Bobby', 'Tom']);
 console.log(getUsersData);
 console.log(getUsersData.getUserNames());
