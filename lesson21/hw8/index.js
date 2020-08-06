@@ -1,4 +1,4 @@
-export function finishList() {
+export const finishList = () => {
    
     const item1 = document.createElement('li');
     itemOne.textContent = '1';
