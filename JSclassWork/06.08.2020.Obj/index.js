@@ -36,17 +36,17 @@ const obj = {
     city: "Kiev"
 };
 
-// console.log(addPropertyV1(obj, "222222"));
+console.log(addPropertyV1(obj, "222222"));
 // console.log(obj);
 
-// console.log(addPropertyV2(obj, "333333"));
+console.log(addPropertyV2(obj, "333333"));
 // console.log(obj);
 
-// console.log(addPropertyV3(obj, "44444"));
-// // console.log(obj);
+console.log(addPropertyV3(obj, "44444"));
+// console.log(obj);
 
-// console.log(addPropertyV4(obj, "55555"));
-// // console.log(obj);
+console.log(addPropertyV4(obj, "55555"));
+// console.log(obj);
 
 console.log(addPropertyV5(obj, "66666"));
 // console.log(obj);
