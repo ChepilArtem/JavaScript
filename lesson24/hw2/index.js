@@ -1,9 +1,9 @@
 const tasks = [
-    { text: 'Visit party', done: true, dateStart: new Date(), dateEnd: undefined },
-    { text: 'Visit doctor', done: false, dateStart: new Date(), dateEnd: new Date() },
-    { text: 'Buy meat', done: false, dateStart: new Date(), dateEnd: new Date() },
-    { text: 'Buy milk', done: true, dateStart: new Date(), dateEnd: new Date() },
+    { text: 'Buy milk', done: false, dateStart: new Date(), dateEnd: new Date() },
     { text: 'Pick up Tom from airport', done: false, dateStart: new Date(), dateEnd: new Date() },
+    { text: 'Visit party', done: false, dateStart: new Date(), dateEnd: undefined },
+    { text: 'Visit doctor', done: true, dateStart: new Date(), dateEnd: new Date() },
+    { text: 'Buy meat', done: true, dateStart: new Date(), dateEnd: new Date() },
 ];
 const listItemElem = document.createElement('li');
 const checkboxElem = document.createElement('input');
