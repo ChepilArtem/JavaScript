@@ -17,8 +17,8 @@ const listElem = document.querySelector('.list');
 const createBtn = document.querySelector('.create-task-btn');
 
 const renderTasks = (tasksList) => {
-listElem.innerHTML = '';
-const tasksElems = tasksList   
+    listElem.innerHTML = '';
+    const tasksElems = tasksList   
     .sort((a, b) => {
         if (a.done - b.done !== 0) {
             return a.done - b.done;
@@ -42,35 +42,30 @@ const tasksElems = tasksList
         listItemElem.append(checkbox, task.text);
         return listItemElem;
     });
-
 listElem.append(...tasksElems);
 };
 renderTasks(tasks);
 
-
-listElem.addEventListener('click', changeTask);
 function changeTask(event) {
-const complete = event.target.classList;
-if (!complete.contains('list__item-checkbox')) 
-return;
-
-const task = tasks.find(task => task.id === event.target.dataset.id);
-task.done = event.target.checked;
-task.doneDate = new Date();
-renderTasks(tasks);
+    const complete = event.target.classList;
+    if (!complete.contains('list__item-checkbox')) return;
+    const task = tasks.find(task => task.id === event.target.dataset.id);
+    task.done = event.target.checked;
+    task.doneDate = new Date();
+    renderTasks(tasks);
 }
+listElem.addEventListener('click', changeTask);
 
-createBtn.addEventListener('click', createTask);
 
 function createTask() {
-const input = document.querySelector('.task-input');
-const inputValue = input.value;
-if (!inputValue) return;
-
-tasks.push({text: inputValue, id: `${tasks.length + 1}`, date: new Date(), done: false,});
-input.value = '';
-renderTasks(tasks);
+    const input = document.querySelector('.task-input');
+    const inputValue = input.value;
+    if (!inputValue) return;
+    tasks.push({text: inputValue, id: `${tasks.length + 1}`, date: new Date(), done: false,});
+    input.value = '';
+    renderTasks(tasks);
 }
+createBtn.addEventListener('click', createTask);
 
 
 
