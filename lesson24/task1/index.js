@@ -1,7 +1,11 @@
-const daysOfTheWeek = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'St'];
+const weekDays = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
 
-export const dayOfWeek = (date, days) => {
+const getDayOfWeek = (date, days) => {
     const day = new Date(date).getDate();
-    const futureDay = new Date(date).setDate(day + days);
-    return daysOfTheWeek[new Date(futureDay).getDay()];
+    const dateInFuture = new Date(date).setDate(day + days);
+
+    return weekDays[new Date(dateInFuture).getDay()];
 };
+const result = getDayOfWeek(new Date(1992, 9, 9), 5);
+
+console.log(result);
