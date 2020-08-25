@@ -6,8 +6,8 @@ const dayOfWeek = (date, days) => {
 
     return weekDays[new Date(dateInFuture).getDay()];
 };
-// const result = dayOfWeek(new Date(1992, 3, 4), 5);
+const result = dayOfWeek(new Date(1992, 3, 4), 5);
 
-// console.log(result);
+console.log(result);
 
 export{dayOfWeek};
