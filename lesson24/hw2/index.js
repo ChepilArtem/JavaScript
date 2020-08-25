@@ -16,6 +16,9 @@ const renderTasks = (tasksList) => {
         if (a.done - b.done !== 0) {
             return a.done - b.done;
         }
+        if (a.done === true) {
+            return new Date(b.date) - new Date(a.date);
+        }
         return new Date(b.date) - new Date(a.date);
         })
     .map((task) => {
@@ -38,7 +41,7 @@ renderTasks(tasks);
 
 function changeTask(event) {
     const complete = event.target.classList;
-    
+
     if (!complete.contains('list__item-checkbox')) return;
 
     const task = tasks.find(task => task.id === event.target.dataset.id);
