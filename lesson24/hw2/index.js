@@ -38,11 +38,11 @@ renderTasks(tasks);
 
 function changeTask(event) {
     const complete = event.target.classList;
+    
     if (!complete.contains('list__item-checkbox')) return;
 
     const task = tasks.find(task => task.id === event.target.dataset.id);
     task.done = event.target.checked;
-    task.dateEnd = new Date();
     renderTasks(tasks);
 }
 listElem.addEventListener('click', changeTask);
