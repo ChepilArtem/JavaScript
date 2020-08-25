@@ -1,71 +1,63 @@
 const tasks = [
-    { text: 'Buy milk', done: false, dateStart: new Date(), dateEnd: new Date() },
-    { text: 'Pick up Tom from airport', done: false, dateStart: new Date(), dateEnd: new Date() },
-    { text: 'Visit party', done: false, dateStart: new Date(), dateEnd: undefined },
-    { text: 'Visit doctor', done: true, dateStart: new Date(), dateEnd: new Date() },
-    { text: 'Buy meat', done: true, dateStart: new Date(), dateEnd: new Date() },
+    {text: 'Buy milk', id: '1', date: new Date(), done: false},
+    {text: 'Pick up Tom from airport', id: '2', date: new Date(), done: false},
+    {text: 'Visit party', id: '3', date: new Date(), done: false},
+    {text: 'Visit doctor', id: '4', date: new Date(), done: false},
+    {text: 'Buy meat', id: '5', date: new Date(), done: false},
 ];
-const listItemElem = document.createElement('li');
-const checkboxElem = document.createElement('input');
 
-const renderListItems = listItems => {
-    const listElem = document.querySelector('.list');
-    listElem.innerHTML = '';
-
-    const listItemsElems = listItems
-        .sort((a, b) => {
-            if (a.done - b.done !== 0) {
-                return a.done - b.done;
-            };
-            if (a.done) {
-                return new Date(b.dateEnd) - new Date(a.dateEnd);
-            }
-            return new Date(b.dateStart) - new Date(a.dateStart);
-        })
-        .map(({ text, done }) => {
-            const listItemElem = document.createElement('li');
-            listItemElem.classList.add('list__item');
-            if (done) {
-                listItemElem.classList.add('list__item_done');
-            }
-            const checkboxElem = document.createElement('input');
-            checkboxElem.setAttribute('type', 'checkbox');
-            checkboxElem.checked = done;
-            checkboxElem.classList.add('list__item-checkbox')
-            listItemElem.append(checkboxElem, text);
-
-            return listItemElem;
-        });
-    listElem.append(...listItemsElems);
-}
-renderListItems(tasks);
+const listElem = document.querySelector('.list');
 const createBtn = document.querySelector('.create-task-btn');
 
-
-const newTask = () => {
-    const inputField = document.querySelector('.task-input');
-    if (!inputField.value) return false;
-    tasks.unshift({
-        text: inputField.value,
-        done: false,
-        dateStart: new Date(),
-        dateEnd: undefined
+const renderTasks = (tasksList) => {
+    listElem.innerHTML = '';
+    const tasksElems = tasksList   
+    .sort((a, b) => {
+        if (a.done - b.done !== 0) {
+            return a.done - b.done;
+        }
+        return new Date(b.date) - new Date(a.date);
+        })
+    .map((task) => {
+        const listItemElem = document.createElement('li');
+        listItemElem.classList.add('list__item');
+        const checkbox = document.createElement('input');
+        checkbox.setAttribute('type', 'checkbox');
+        checkbox.setAttribute('data-id', task.id);
+        checkbox.checked = task.done;
+        checkbox.classList.add('list__item-checkbox');
+        if (task.done) {
+            listItemElem.classList.add('list__item_done');
+        };
+        listItemElem.append(checkbox, task.text);
+        return listItemElem;
     });
-    inputField.value = '';
-    renderListItems(tasks);
-}
-
-
-createBtn.addEventListener('click', newTask);
-
-
-
-const taskConfirm = document.querySelector('.list');
-const confirmItem = e => {
-    const confirmItem = tasks.find(item =>
-        item.text === e.target.parentNode.textContent);
-    confirmItem.done = e.target.checked
-    confirmItem.dateEnd = confirmItem.done ? new Date() : undefined;
-    renderListItems(tasks);
+listElem.append(...tasksElems);
 };
-taskConfirm.addEventListener('click', confirmItem);
+renderTasks(tasks);
+
+function changeTask(event) {
+    const complete = event.target.classList;
+    if (!complete.contains('list__item-checkbox')) return;
+
+    const task = tasks.find(task => task.id === event.target.dataset.id);
+    task.done = event.target.checked;
+    task.dateEnd = new Date();
+    renderTasks(tasks);
+}
+listElem.addEventListener('click', changeTask);
+
+
+function createTask() {
+    const input = document.querySelector('.task-input');
+    const inputValue = input.value;
+    if (!inputValue) return;
+    tasks.push({
+        text: inputValue,
+        id: `${tasks.length + 1}`,
+        date: new Date(), 
+        done: false,});
+    input.value = '';
+    renderTasks(tasks);
+}
+createBtn.addEventListener('click', createTask);
