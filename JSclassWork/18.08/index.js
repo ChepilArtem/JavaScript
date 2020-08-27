@@ -2,12 +2,18 @@ const timer = {
 
     secondPassed: 0,
     minPassed: 0,
+    intervalId: null,
 
     startTime() {
-        setInterval(() => {
+        this.intervalId = setInterval(() => {
             console.log(this);
 
             this.secondPassed =+ 1;
+
+            if (this.secondPassed === 60) {
+                this.minPassed += 1;
+                this.secondPassed = 0;
+            }
         }, 1000);
     },
 
@@ -22,7 +28,7 @@ const timer = {
     // },
 
     stopTime() {
-
+        clearInterval(this.intervalId);
     },
 
     getTime() {
@@ -35,6 +41,7 @@ const timer = {
 }
 
 timer.startTime();
+timer.stopTime();
 
 // setTimeout(() => {
 //     console.log('hello');
